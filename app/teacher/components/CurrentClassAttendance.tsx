@@ -69,22 +69,23 @@ export default function CurrentClassAttendance() {
                             <div className="flex gap-2">
                                 <button
                                     onClick={() => markAttendance(student.id, "P")}
-                                    className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold hover:scale-110 transition-transform ${student.status === "P"
+                                    className={`w-8 h-8 rounded-lg flex items-center justify-center hover:scale-110 transition-transform ${student.status === "P"
                                         ? "bg-emerald-600 text-white"
-                                        : "bg-emerald-900/20 text-emerald-500 border border-emerald-900/30"
+                                        : "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600"
                                         }`}
                                 >
                                     P
                                 </button>
                                 <button
                                     onClick={() => markAttendance(student.id, "A")}
-                                    className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold hover:scale-110 transition-transform ${student.status === "A"
+                                    className={`w-8 h-8 rounded-lg flex items-center justify-center hover:scale-110 transition-transform ${student.status === "A"
                                         ? "bg-red-600 text-white"
-                                        : "bg-red-900/20 text-red-500 border border-red-900/30"
+                                        : "bg-red-100 dark:bg-red-900/40 text-red-600"
                                         }`}
                                 >
                                     A
                                 </button>
+
                             </div>
                         </div>
                     ))}

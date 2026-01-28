@@ -26,7 +26,7 @@ export default function Testimonials() {
     ];
 
     return (
-        <section id="testimonials" className="px-4 md:px-20 lg:px-40 py-24 bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-gray-800">
+        <section id="testimonials" className="px-4 md:px-20 lg:px-40 py-24 bg-[#0f1419] border-t border-gray-800">
             <div className="max-w-[1280px] mx-auto">
                 <div className="flex flex-col gap-6 mb-16 items-center text-center">
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider w-fit">
@@ -44,7 +44,7 @@ export default function Testimonials() {
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="flex flex-col gap-6 p-8 rounded-2xl bg-background-light dark:bg-gray-800/40 border border-transparent hover:border-primary/20 transition-all"
+                            className="flex flex-col gap-6 p-8 rounded-2xl bg-gray-800/40 border border-transparent hover:border-primary/20 transition-all"
                         >
                             <div className="flex text-primary">
                                 {Array.from({ length: testimonial.rating }).map((_, i) => (

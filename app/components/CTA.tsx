@@ -14,7 +14,7 @@ export default function CTA() {
                         Join hundreds of institutions already scaling their impact. Get a personalized tour of our cloud platform today.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 w-full">
-                        <button className="flex min-w-[220px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-white text-primary text-base font-black hover:bg-gray-100 transition-all shadow-xl">
+                        <button className="flex min-w-[220px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary border-2 border-white/30 text-white text-base font-bold hover:bg-white/10 transition-all">
                             <span className="truncate">Get Started Now</span>
                         </button>
                         <button className="flex min-w-[220px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary border-2 border-white/30 text-white text-base font-bold hover:bg-white/10 transition-all">

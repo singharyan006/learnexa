@@ -27,7 +27,7 @@ export default function FAQ() {
     ];
 
     return (
-        <section id="faq" className="px-4 md:px-20 lg:px-40 py-24 bg-background-light dark:bg-background-dark/50 border-t border-[#f0f2f4] dark:border-gray-800">
+        <section id="faq" className="px-4 md:px-20 lg:px-40 py-24 bg-[#0a0e13] border-t border-gray-800">
             <div className="max-w-[800px] mx-auto">
                 <div className="flex flex-col gap-6 mb-16 items-center text-center">
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider w-fit">
@@ -45,7 +45,7 @@ export default function FAQ() {
                     {faqs.map((faq, index) => (
                         <details
                             key={index}
-                            className="group bg-white dark:bg-gray-800/50 rounded-2xl border border-[#dbdfe6] dark:border-gray-800 overflow-hidden transition-all duration-300 hover:border-primary/30"
+                            className="group bg-gray-800/50 rounded-2xl border border-gray-800 overflow-hidden transition-all duration-300 hover:border-primary/30"
                         >
                             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
                                 <h3 className="text-[#111318] dark:text-white text-lg font-bold">

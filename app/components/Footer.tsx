@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="bg-white dark:bg-background-dark border-t border-[#f0f2f4] dark:border-gray-800 px-4 md:px-20 lg:px-40 py-16">
+        <footer className="bg-[#0f1419] border-t border-gray-800 px-4 md:px-20 lg:px-40 py-16">
             <div className="max-w-[1280px] mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
                     <div className="col-span-1 md:col-span-1 flex flex-col gap-6">
@@ -40,7 +40,7 @@ export default function Footer() {
                         <p className="text-[#616f89] dark:text-gray-400 text-xs mb-4">Stay updated with the latest in EdTech.</p>
                         <div className="flex gap-2">
                             <input
-                                className="flex-1 bg-background-light dark:bg-gray-800 border-none rounded-lg text-sm px-4 focus:ring-2 focus:ring-primary"
+                                className="flex-1 bg-gray-800 border-none rounded-lg text-sm px-4 focus:ring-2 focus:ring-primary text-white"
                                 placeholder="Email"
                                 type="email"
                             />
@@ -51,7 +51,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-[#f0f2f4] dark:border-gray-800 gap-6">
+                <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gray-800 gap-6">
                     <p className="text-[#616f89] dark:text-gray-500 text-sm">
                         © 2024 Learnexa. All rights reserved.
                     </p>

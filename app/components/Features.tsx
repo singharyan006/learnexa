@@ -18,7 +18,7 @@ export default function Features() {
     ];
 
     return (
-        <section id="features" className="px-4 md:px-20 lg:px-40 py-24 bg-background-light dark:bg-background-dark/50 border-t border-[#f0f2f4] dark:border-gray-800">
+        <section id="features" className="px-4 md:px-20 lg:px-40 py-24 bg-[#0a0e13] border-t border-gray-800">
             <div className="max-w-[1280px] mx-auto">
                 <div className="flex flex-col gap-6 mb-16 items-center text-center">
                     <h2 className="text-[#111318] dark:text-white text-3xl md:text-5xl font-black leading-tight tracking-tight max-w-[800px]">
@@ -33,7 +33,7 @@ export default function Features() {
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="group flex flex-col gap-6 rounded-2xl border border-[#dbdfe6] dark:border-gray-800 bg-white dark:bg-gray-800/50 p-8 hover:shadow-2xl hover:border-primary/30 transition-all duration-300"
+                            className="group flex flex-col gap-6 rounded-2xl border border-gray-800 bg-gray-800/50 p-8 hover:shadow-2xl hover:border-primary/30 transition-all duration-300"
                         >
                             <div className="size-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
                                 <span className="material-symbols-outlined text-3xl">{feature.icon}</span>
