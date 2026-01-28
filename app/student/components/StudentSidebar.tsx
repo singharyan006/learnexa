@@ -68,13 +68,7 @@ export default function StudentSidebar() {
 
             {/* Bottom section */}
             <div className="p-4 border-t border-slate-200 dark:border-slate-800">
-                <button
-                    className="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all w-full"
-                    onClick={() => document.documentElement.classList.toggle('dark')}
-                >
-                    <span className="material-symbols-outlined">dark_mode</span>
-                    Switch Mode
-                </button>
+
 
                 <div className="mt-4 px-4">
                     <p className="text-xs text-slate-500">Academic Support</p>
