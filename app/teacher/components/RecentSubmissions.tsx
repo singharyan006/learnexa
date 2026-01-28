@@ -24,7 +24,7 @@ export default function RecentSubmissions() {
     ];
 
     return (
-        <section className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700/50 p-6">
+        <section className="bg-[#151B2C] rounded-2xl shadow-sm border border-[#1E293B] p-6">
             <div className="flex items-center justify-between mb-6">
                 <h3 className="text-lg font-bold flex items-center gap-2">
                     <span className="material-symbols-outlined text-primary-teacher">upload_file</span>
@@ -37,7 +37,7 @@ export default function RecentSubmissions() {
 
             <div className="overflow-x-auto">
                 <table className="w-full">
-                    <thead className="text-left border-b border-slate-100 dark:border-slate-700 text-slate-500 text-sm">
+                    <thead className="text-left border-b border-[#1E293B] text-slate-500 text-sm">
                         <tr>
                             <th className="pb-3 font-semibold">Student</th>
                             <th className="pb-3 font-semibold">Assignment</th>
@@ -45,7 +45,7 @@ export default function RecentSubmissions() {
                             <th className="pb-3 font-semibold text-right">Action</th>
                         </tr>
                     </thead>
-                    <tbody className="divide-y divide-slate-50 dark:divide-slate-700/50">
+                    <tbody className="divide-y divide-[#1E293B]">
                         {submissions.map((submission, index) => (
                             <tr key={index}>
                                 <td className="py-4">

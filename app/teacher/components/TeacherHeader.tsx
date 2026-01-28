@@ -16,15 +16,15 @@ export default function TeacherHeader() {
                         search
                     </span>
                     <input
-                        className="pl-10 pr-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-full text-sm w-full md:w-64 focus:ring-primary-teacher focus:border-primary-teacher"
+                        className="pl-10 pr-4 py-2 bg-[#151B2C] border border-[#1E293B] rounded-full text-sm w-full md:w-64 focus:ring-primary-teacher focus:border-primary-teacher outline-none transition-all"
                         placeholder="Search students..."
                         type="text"
                     />
                 </div>
 
-                <button className="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 relative">
-                    <span className="material-symbols-outlined">notifications</span>
-                    <span className="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
+                <button className="p-2 rounded-full hover:bg-[#1E293B] relative transition-colors">
+                    <span className="material-symbols-outlined text-slate-400">notifications</span>
+                    <span className="absolute top-2 right-2 w-2 h-2 bg-rose-500 rounded-full border-2 border-[#0B1120]"></span>
                 </button>
             </div>
         </header>

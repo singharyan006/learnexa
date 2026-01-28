@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "The all-in-one cloud platform to centralize administration, enhance student performance, and bridge the gap between parents and teachers.",
 };
 
+import { ThemeProvider } from "./components/ThemeProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
