@@ -4,10 +4,10 @@ export default function StatsCards() {
             title: "Total Students",
             value: "1,240",
             icon: "groups",
-            iconBg: "bg-blue-50 dark:bg-blue-900/20",
-            iconColor: "text-blue-600 dark:text-blue-400",
+            iconBg: "bg-indigo-500/10",
+            iconColor: "text-indigo-400",
             badge: "+3%",
-            badgeColor: "text-green-500 bg-green-50 dark:bg-green-900/20",
+            badgeColor: "text-emerald-400 bg-emerald-500/10",
             badgeIcon: "trending_up",
             progress: 85,
             progressLabel: "85% Capacity reached",
@@ -16,20 +16,20 @@ export default function StatsCards() {
             title: "Teacher Count",
             value: "85",
             icon: "school",
-            iconBg: "bg-purple-50 dark:bg-purple-900/20",
-            iconColor: "text-purple-600 dark:text-purple-400",
+            iconBg: "bg-purple-500/10",
+            iconColor: "text-purple-400",
             badge: "Stable",
-            badgeColor: "text-slate-400 bg-slate-50 dark:bg-slate-800",
+            badgeColor: "text-slate-400 bg-slate-500/10",
             subtitle: "1:15 Teacher-student ratio",
         },
         {
-            title: "Fee Collection Status",
+            title: "Fee Collection",
             value: "$425,000",
             icon: "payments",
-            iconBg: "bg-emerald-50 dark:bg-emerald-900/20",
-            iconColor: "text-emerald-600 dark:text-emerald-400",
+            iconBg: "bg-emerald-500/10",
+            iconColor: "text-emerald-400",
             badge: "92%",
-            badgeColor: "text-green-500 bg-green-50 dark:bg-green-900/20",
+            badgeColor: "text-emerald-400 bg-emerald-500/10",
             badgeIcon: "check_circle",
             subtitle: "Fiscal Year 2023-24",
         },
@@ -37,10 +37,10 @@ export default function StatsCards() {
             title: "Daily Attendance",
             value: "96.8%",
             icon: "how_to_reg",
-            iconBg: "bg-orange-50 dark:bg-orange-900/20",
-            iconColor: "text-orange-600 dark:text-orange-400",
+            iconBg: "bg-amber-500/10",
+            iconColor: "text-amber-400",
             badge: "Today",
-            badgeColor: "text-orange-500 bg-orange-50 dark:bg-orange-900/20",
+            badgeColor: "text-amber-400 bg-amber-500/10",
             badgeIcon: "schedule",
             subtitle: "1,201 Students present",
         },
@@ -51,31 +51,31 @@ export default function StatsCards() {
             {stats.map((stat, index) => (
                 <div
                     key={index}
-                    className="bg-white dark:bg-slate-900 p-6 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 relative overflow-hidden"
+                    className="bg-[#151B2C] p-6 rounded-3xl shadow-sm border border-[#1E293B] relative overflow-hidden group hover:border-[#4f46e5]/50 transition-all duration-300"
                 >
                     <div className="flex justify-between items-start mb-4">
-                        <div className={`${stat.iconBg} p-2.5 rounded-xl`}>
-                            <span className={`material-icons-round ${stat.iconColor}`}>{stat.icon}</span>
+                        <div className={`${stat.iconBg} p-3 rounded-2xl border border-white/5`}>
+                            <span className={`material-symbols-outlined ${stat.iconColor}`}>{stat.icon}</span>
                         </div>
-                        <span className={`text-xs font-bold flex items-center px-2 py-1 rounded-full ${stat.badgeColor}`}>
-                            {stat.badgeIcon && <span className="material-icons-round text-sm mr-0.5">{stat.badgeIcon}</span>}
+                        <span className={`text-[10px] font-bold flex items-center px-2 py-1 rounded-lg uppercase tracking-wider ${stat.badgeColor}`}>
+                            {stat.badgeIcon && <span className="material-symbols-outlined text-[12px] mr-1">{stat.badgeIcon}</span>}
                             {stat.badge}
                         </span>
                     </div>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">{stat.title}</p>
-                    <h3 className="text-2xl font-bold mt-1 dark:text-white">{stat.value}</h3>
+                    <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest">{stat.title}</p>
+                    <h3 className="text-2xl font-bold mt-1 text-white">{stat.value}</h3>
 
                     {stat.progress !== undefined && (
                         <>
-                            <div className="mt-4 h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
-                                <div className="bg-blue-600 h-full rounded-full" style={{ width: `${stat.progress}%` }}></div>
+                            <div className="mt-4 h-1.5 w-full bg-[#0B1120] rounded-full overflow-hidden">
+                                <div className="bg-[#4f46e5] h-full rounded-full shadow-[0_0_10px_rgba(79,70,229,0.5)]" style={{ width: `${stat.progress}%` }}></div>
                             </div>
-                            <p className="text-[11px] text-slate-400 mt-2">{stat.progressLabel}</p>
+                            <p className="text-[10px] text-slate-500 mt-2 font-bold uppercase tracking-wider">{stat.progressLabel}</p>
                         </>
                     )}
 
                     {stat.subtitle && !stat.progress && (
-                        <p className="text-[11px] text-slate-400 mt-4">{stat.subtitle}</p>
+                        <p className="text-[10px] text-slate-500 mt-4 font-bold uppercase tracking-wider italic">{stat.subtitle}</p>
                     )}
                 </div>
             ))}
