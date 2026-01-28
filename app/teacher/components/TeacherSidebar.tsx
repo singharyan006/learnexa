@@ -73,13 +73,7 @@ export default function TeacherSidebar() {
                             <p className="text-xs text-slate-500">English Dept. Lead</p>
                         </div>
                     </div>
-                    <button
-                        className="w-full py-2 flex items-center justify-center gap-2 text-xs font-medium border border-slate-300 dark:border-slate-600 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-all"
-                        onClick={() => document.documentElement.classList.toggle('dark')}
-                    >
-                        <span className="material-symbols-outlined text-sm">contrast</span>
-                        Toggle Theme
-                    </button>
+
                 </div>
             </div>
         </aside>
