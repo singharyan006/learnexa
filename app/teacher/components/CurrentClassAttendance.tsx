@@ -7,7 +7,7 @@ interface Student {
     name: string;
     initials: string;
     initialsColor: string;
-    status: "P" | "A" | "L" | null;
+    status: "P" | "A" | null;
 }
 
 export default function CurrentClassAttendance() {
@@ -17,13 +17,13 @@ export default function CurrentClassAttendance() {
         { id: 3, name: "Chris Ray", initials: "CR", initialsColor: "bg-rose-100 dark:bg-rose-900/40 text-rose-600", status: null },
     ]);
 
-    const markAttendance = (studentId: number, status: "P" | "A" | "L") => {
+    const markAttendance = (studentId: number, status: "P" | "A") => {
         setStudents(students.map(s => s.id === studentId ? { ...s, status } : s));
     };
 
     return (
-        <section className="bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700/50 overflow-hidden">
-            <div className="p-6 border-b border-slate-100 dark:border-slate-700/50 flex items-center justify-between bg-primary-teacher/5">
+        <section className="bg-[#151B2C] rounded-2xl shadow-sm border border-[#1E293B] overflow-hidden">
+            <div className="p-6 border-b border-[#1E293B] flex items-center justify-between bg-primary-teacher/10">
                 <div>
                     <span className="text-xs font-bold text-primary-teacher uppercase tracking-wider">
                         Current Class
@@ -31,9 +31,9 @@ export default function CurrentClassAttendance() {
                     <h3 className="text-lg font-bold">Grade 10-A English Literature</h3>
                 </div>
                 <div className="text-right">
-                    <p className="text-xs text-slate-500 dark:text-slate-400">09:00 AM - 10:15 AM</p>
-                    <span className="inline-flex items-center gap-1 text-xs font-medium text-emerald-600">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-pulse"></span>
+                    <p className="text-xs text-slate-400">09:00 AM - 10:15 AM</p>
+                    <span className="inline-flex items-center gap-1 text-xs font-medium text-emerald-400">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
                         In Progress
                     </span>
                 </div>
@@ -42,11 +42,11 @@ export default function CurrentClassAttendance() {
             <div className="p-6">
                 <div className="flex items-center justify-between mb-4">
                     <h4 className="font-semibold flex items-center gap-2">
-                        <span className="material-symbols-outlined text-slate-400">checklist</span>
+                        <span className="material-symbols-outlined text-slate-500 text-sm">checklist</span>
                         Mark Attendance
                     </h4>
                     <div className="flex gap-2">
-                        <button className="px-3 py-1 text-xs font-medium bg-slate-100 dark:bg-slate-700 rounded-md hover:bg-slate-200 dark:hover:bg-slate-600">
+                        <button className="px-3 py-1 text-[10px] font-bold bg-[#1E293B] text-slate-300 rounded-lg hover:bg-[#2D3748] transition-colors">
                             Mark All Present
                         </button>
                     </div>
@@ -56,7 +56,7 @@ export default function CurrentClassAttendance() {
                     {students.map((student) => (
                         <div
                             key={student.id}
-                            className={`flex items-center justify-between p-3 rounded-xl border border-slate-100 dark:border-slate-700 ${student.id % 2 === 1 ? 'bg-slate-50/50 dark:bg-slate-800/50' : ''
+                            className={`flex items-center justify-between p-3 rounded-xl border border-[#1E293B] ${student.id % 2 === 1 ? 'bg-[#1E293B]/30' : ''
                                 }`}
                         >
                             <div className="flex items-center gap-3">
@@ -69,30 +69,21 @@ export default function CurrentClassAttendance() {
                             <div className="flex gap-2">
                                 <button
                                     onClick={() => markAttendance(student.id, "P")}
-                                    className={`w-8 h-8 rounded-lg flex items-center justify-center hover:scale-110 transition-transform ${student.status === "P"
-                                            ? "bg-emerald-600 text-white"
-                                            : "bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600"
+                                    className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold hover:scale-110 transition-transform ${student.status === "P"
+                                        ? "bg-emerald-600 text-white"
+                                        : "bg-emerald-900/20 text-emerald-500 border border-emerald-900/30"
                                         }`}
                                 >
                                     P
                                 </button>
                                 <button
                                     onClick={() => markAttendance(student.id, "A")}
-                                    className={`w-8 h-8 rounded-lg flex items-center justify-center hover:scale-110 transition-transform ${student.status === "A"
-                                            ? "bg-red-600 text-white"
-                                            : "bg-red-100 dark:bg-red-900/40 text-red-600"
+                                    className={`w-8 h-8 rounded-lg flex items-center justify-center text-xs font-bold hover:scale-110 transition-transform ${student.status === "A"
+                                        ? "bg-red-600 text-white"
+                                        : "bg-red-900/20 text-red-500 border border-red-900/30"
                                         }`}
                                 >
                                     A
-                                </button>
-                                <button
-                                    onClick={() => markAttendance(student.id, "L")}
-                                    className={`w-8 h-8 rounded-lg flex items-center justify-center hover:scale-110 transition-transform ${student.status === "L"
-                                            ? "bg-amber-600 text-white"
-                                            : "bg-amber-100 dark:bg-amber-900/40 text-amber-600"
-                                        }`}
-                                >
-                                    L
                                 </button>
                             </div>
                         </div>

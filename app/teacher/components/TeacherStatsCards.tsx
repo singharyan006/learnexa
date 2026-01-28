@@ -18,23 +18,14 @@ export default function TeacherStatsCards() {
             iconBg: "bg-amber-50 dark:bg-amber-900/20",
             iconColor: "text-amber-600",
         },
-        {
-            title: "Parent Messages",
-            value: "3",
-            subtitle: "View unread",
-            subtitleColor: "text-primary-teacher underline cursor-pointer",
-            icon: "forum",
-            iconBg: "bg-indigo-50 dark:bg-indigo-900/20",
-            iconColor: "text-primary-teacher",
-        },
     ];
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {stats.map((stat, index) => (
                 <div
                     key={index}
-                    className="bg-white dark:bg-slate-800 p-6 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700/50 flex items-center justify-between"
+                    className="bg-[#151B2C] p-6 rounded-2xl shadow-sm border border-[#1E293B] flex items-center justify-between"
                 >
                     <div>
                         <p className="text-sm font-medium text-slate-500 dark:text-slate-400">

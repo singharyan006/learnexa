@@ -3,21 +3,36 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Round');
 @import "tailwindcss";
 
-:root {
-  --background: #f6f6f8;
-  --foreground: #111318;
+@theme {
+  --color-primary: #135bec;
+  --color-primary-admin: #1e3a8a;
+  --color-primary-teacher: #4f46e5;
+  --color-background-light: #f8fafc;
+  --color-background-dark: #0b1120;
+  --color-surface-dark: #151b2c;
+  --color-border-dark: #1e293b;
+  --color-accent-gold: #d4af37;
+
+  --font-display: "Outfit", "Inter", sans-serif;
+  --font-sans: "Inter", sans-serif;
+
+  --radius-default: 0.75rem;
+  --radius-2xl: 1rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #101622;
-    --foreground: #ffffff;
-  }
+:root {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f8fafc;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
   transition: background-color 0.2s, color 0.2s;
 }
