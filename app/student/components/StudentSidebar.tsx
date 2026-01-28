@@ -1,14 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 export default function StudentSidebar() {
+    const pathname = usePathname();
+
+    const menuItems = [
+        { name: "Dashboard", icon: "dashboard", href: "/student" },
+        { name: "Courses", icon: "menu_book", href: "/student/courses" },
+        { name: "Schedule", icon: "calendar_today", href: "/student/schedule" },
+        { name: "Exams", icon: "quiz", href: "/student/exams" },
+        { name: "Grades", icon: "grade", href: "/student/grades" },
+    ];
+
     return (
         <aside className="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col flex-shrink-0 hidden lg:flex">
             {/* Logo */}
             <div className="p-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary-teacher rounded-lg flex items-center justify-center text-white">
+                <div className="w-10 h-10 bg-primary-teacher rounded-lg flex items-center justify-center text-white shadow-lg shadow-indigo-500/20">
                     <span className="material-symbols-outlined">school</span>
                 </div>
                 <h1 className="text-xl font-bold tracking-tight text-primary-teacher">EDUFLOW</h1>
@@ -16,54 +26,22 @@ export default function StudentSidebar() {
 
             {/* Navigation */}
             <nav className="mt-6 px-4 space-y-1 flex-1">
-                <Link
-                    className="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg bg-indigo-50 dark:bg-indigo-900/30 text-primary-teacher"
-                    href="/student"
-                >
-                    <span className="material-symbols-outlined">dashboard</span>
-                    Dashboard
-                </Link>
-
-                <Link
-                    className="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
-                    href="/student/courses"
-                >
-                    <span className="material-symbols-outlined">menu_book</span>
-                    Courses
-                </Link>
-
-                <Link
-                    className="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
-                    href="/student/schedule"
-                >
-                    <span className="material-symbols-outlined">calendar_today</span>
-                    Schedule
-                </Link>
-
-                <Link
-                    className="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
-                    href="/student/exams"
-                >
-                    <span className="material-symbols-outlined">quiz</span>
-                    Exams
-                </Link>
-
-                <Link
-                    className="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
-                    href="/student/grades"
-                >
-                    <span className="material-symbols-outlined">grade</span>
-                    Grades
-                </Link>
-
-                <Link
-                    className="flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
-                    href="/student/messages"
-                >
-                    <span className="material-symbols-outlined">chat</span>
-                    Messages
-                    <span className="ml-auto bg-red-500 text-white text-[10px] w-5 h-5 flex items-center justify-center rounded-full">3</span>
-                </Link>
+                {menuItems.map((item) => {
+                    const isActive = pathname === item.href;
+                    return (
+                        <Link
+                            key={item.href}
+                            className={`flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl transition-all ${isActive
+                                ? 'bg-indigo-50 dark:bg-indigo-900/30 text-primary-teacher shadow-sm'
+                                : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-200'
+                                }`}
+                            href={item.href}
+                        >
+                            <span className={`material-symbols-outlined ${isActive ? 'fill-1' : ''}`}>{item.icon}</span>
+                            {item.name}
+                        </Link>
+                    );
+                })}
             </nav>
 
             {/* Bottom section */}
