@@ -12,7 +12,6 @@ export default function StudentSidebar() {
         { name: "Schedule", icon: "calendar_today", href: "/student/schedule" },
         { name: "Exams", icon: "quiz", href: "/student/exams" },
         { name: "Grades", icon: "grade", href: "/student/grades" },
-        { name: "Messages", icon: "chat", href: "/student/messages", badge: "3" },
     ];
 
     return (
@@ -40,11 +39,6 @@ export default function StudentSidebar() {
                         >
                             <span className={`material-symbols-outlined ${isActive ? 'fill-1' : ''}`}>{item.icon}</span>
                             {item.name}
-                            {item.badge && (
-                                <span className={`ml-auto ${isActive ? 'bg-primary-teacher text-white' : 'bg-red-500 text-white'} text-[10px] w-5 h-5 flex items-center justify-center rounded-full font-bold`}>
-                                    {item.badge}
-                                </span>
-                            )}
                         </Link>
                     );
                 })}

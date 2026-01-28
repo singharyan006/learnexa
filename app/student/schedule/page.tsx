@@ -56,7 +56,7 @@ export default function StudentSchedule() {
                             <span className="material-symbols-outlined text-sm">chevron_left</span>
                             Previous
                         </button>
-                        <button className="px-5 py-2.5 bg-white hover:bg-white/90 text-primary-teacher rounded-xl text-sm font-black flex items-center gap-2 transition-all shadow-lg">
+                        <button className="px-5 py-2.5 bg-white hover:bg-slate-50 text-slate-900 rounded-xl text-sm font-black flex items-center gap-2 transition-all shadow-lg hover:scale-105">
                             <span className="material-symbols-outlined text-sm">chevron_right</span>
                             Next Week
                         </button>

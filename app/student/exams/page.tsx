@@ -77,11 +77,8 @@ export default function StudentExams() {
                     </div>
 
                     <div className="flex flex-wrap items-center gap-3">
-                        <button className="px-5 py-2.5 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl text-sm font-bold flex items-center gap-2 transition-all border border-white/20">
-                            <span className="material-symbols-outlined text-sm">download</span>
-                            Exam Schedule
-                        </button>
-                        <button className="px-5 py-2.5 bg-white hover:bg-white/90 text-rose-600 rounded-xl text-sm font-black flex items-center gap-2 transition-all shadow-lg">
+
+                        <button className="px-5 py-2.5 bg-white hover:bg-slate-50 text-slate-900 rounded-xl text-sm font-black flex items-center gap-2 transition-all shadow-lg hover:scale-105">
                             <span className="material-symbols-outlined text-sm">school</span>
                             Study Resources
                         </button>

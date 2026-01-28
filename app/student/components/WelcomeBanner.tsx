@@ -29,10 +29,7 @@ export default function WelcomeBanner() {
                         <span className="material-symbols-outlined text-sm">calendar_today</span>
                         Full Schedule
                     </button>
-                    <button className="px-5 py-2.5 bg-white hover:bg-white/90 text-primary-teacher rounded-xl text-sm font-black flex items-center gap-2 transition-all shadow-lg">
-                        <span className="material-symbols-outlined text-sm">download</span>
-                        Report Card
-                    </button>
+
                 </div>
             </div>
         </div>
