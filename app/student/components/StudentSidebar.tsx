@@ -15,13 +15,13 @@ export default function StudentSidebar() {
     ];
 
     return (
-        <aside className="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col flex-shrink-0 hidden lg:flex">
+        <aside className="w-64 bg-surface-sidebar dark:bg-surface-sidebar border-r border-surface-card/30 dark:border-surface-card flex flex-col flex-shrink-0 hidden lg:flex">
             {/* Logo */}
             <div className="p-6 flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary-teacher rounded-lg flex items-center justify-center text-white shadow-lg shadow-indigo-500/20">
+                <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center text-text-heading shadow-lg shadow-primary/20">
                     <span className="material-symbols-outlined">school</span>
                 </div>
-                <h1 className="text-xl font-bold tracking-tight text-primary-teacher">EDUFLOW</h1>
+                <h1 className="text-xl font-bold tracking-tight text-primary">Learnexa</h1>
             </div>
 
             {/* Navigation */}
@@ -32,8 +32,8 @@ export default function StudentSidebar() {
                         <Link
                             key={item.href}
                             className={`flex items-center gap-3 px-4 py-3 text-sm font-medium rounded-xl transition-all ${isActive
-                                ? 'bg-indigo-50 dark:bg-indigo-900/30 text-primary-teacher shadow-sm'
-                                : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-slate-900 dark:hover:text-slate-200'
+                                ? 'bg-primary/10 dark:bg-primary/10 text-primary shadow-sm'
+                                : 'text-text-placeholder dark:text-text-muted hover:bg-surface-card/20 dark:hover:bg-surface-card/50 hover:text-text-heading dark:hover:text-text-heading'
                                 }`}
                             href={item.href}
                         >
@@ -45,12 +45,12 @@ export default function StudentSidebar() {
             </nav>
 
             {/* Bottom section */}
-            <div className="p-4 border-t border-slate-200 dark:border-slate-800">
+            <div className="p-4 border-t border-surface-card/30 dark:border-surface-card">
 
 
                 <div className="mt-4 px-4">
-                    <p className="text-xs text-slate-500">Academic Support</p>
-                    <a href="#" className="text-sm font-medium text-primary-teacher hover:underline">
+                    <p className="text-xs text-text-placeholder">Academic Support</p>
+                    <a href="#" className="text-sm font-medium text-primary hover:underline">
                         Contact Counselor
                     </a>
                 </div>

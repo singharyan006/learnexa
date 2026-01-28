@@ -4,10 +4,10 @@ import React from "react";
 
 export default function AdminCommunicationPage() {
     const channels = [
-        { name: "WhatsApp Broadcast", icon: "chat", count: "1,240 Parents", status: "Active", color: "bg-emerald-500/10 text-emerald-400" },
-        { name: "Global Email", icon: "mail", count: "85 Faculty", status: "Ready", color: "bg-indigo-500/10 text-indigo-400" },
-        { name: "SMS Gateway", icon: "sms", count: "12,450 Monthly", status: "Online", color: "bg-amber-500/10 text-amber-400" },
-        { name: "App Notifications", icon: "notifications_active", count: "2,400 Users", status: "Active", color: "bg-purple-500/10 text-purple-400" },
+        { name: "WhatsApp Broadcast", icon: "chat", count: "1,240 Parents", status: "Active", color: "bg-success/10 text-emerald-400" },
+        { name: "Global Email", icon: "mail", count: "85 Faculty", status: "Ready", color: "bg-primary/10 text-primary" },
+        { name: "SMS Gateway", icon: "sms", count: "12,450 Monthly", status: "Online", color: "bg-warning/10 text-amber-400" },
+        { name: "App Notifications", icon: "notifications_active", count: "2,400 Users", status: "Active", color: "bg-primary/10 text-primary" },
     ];
 
     const recentCampaigns = [
@@ -20,11 +20,11 @@ export default function AdminCommunicationPage() {
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <header className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                 <div>
-                    <h2 className="text-3xl font-display font-bold tracking-tight text-white uppercase">Central Communication</h2>
-                    <p className="text-slate-500 font-bold uppercase text-[10px] tracking-widest mt-1">Multi-channel broadcast & stakeholder engagement hub</p>
+                    <h2 className="text-3xl font-display font-bold tracking-tight text-text-heading uppercase">Central Communication</h2>
+                    <p className="text-text-placeholder font-bold uppercase text-[10px] tracking-widest mt-1">Multi-channel broadcast & stakeholder engagement hub</p>
                 </div>
                 <div className="flex gap-4">
-                    <button className="flex items-center gap-2 px-6 py-3 bg-[#4f46e5] text-white rounded-2xl text-[10px] font-bold uppercase tracking-widest hover:opacity-90 transition-all shadow-xl shadow-indigo-500/20">
+                    <button className="flex items-center gap-2 px-6 py-3 bg-primary text-text-heading rounded-2xl text-[10px] font-bold uppercase tracking-widest hover:opacity-90 transition-all shadow-xl shadow-primary/20">
                         <span className="material-symbols-outlined text-lg">campaign</span>
                         New Broadcast
                     </button>
@@ -33,18 +33,18 @@ export default function AdminCommunicationPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {channels.map((channel, i) => (
-                    <div key={i} className="bg-[#151B2C] p-6 rounded-3xl border border-[#1E293B] shadow-sm hover:border-[#4f46e5]/30 transition-all group cursor-pointer relative overflow-hidden">
+                    <div key={i} className="bg-surface-card p-6 rounded-3xl border border-surface-card shadow-sm hover:border-primary/30 transition-all group cursor-pointer relative overflow-hidden">
                         <div className="flex items-center gap-4">
                             <div className={`w-12 h-12 rounded-2xl ${channel.color} flex items-center justify-center border border-white/5`}>
                                 <span className="material-symbols-outlined text-xl">{channel.icon}</span>
                             </div>
                             <div className="flex-1 min-w-0">
-                                <h4 className="text-sm font-bold text-slate-200 truncate">{channel.name}</h4>
-                                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">{channel.count}</p>
+                                <h4 className="text-sm font-bold text-text-heading truncate">{channel.name}</h4>
+                                <p className="text-[10px] font-bold text-text-placeholder uppercase tracking-widest mt-1">{channel.count}</p>
                             </div>
                         </div>
-                        <div className="mt-4 flex items-center justify-between border-t border-[#1E293B] pt-4">
-                            <span className="text-[10px] font-bold text-slate-600 uppercase tracking-widest">System Status:</span>
+                        <div className="mt-4 flex items-center justify-between border-t border-surface-card pt-4">
+                            <span className="text-[10px] font-bold text-text-placeholder uppercase tracking-widest">System Status:</span>
                             <span className={`text-[10px] font-bold uppercase tracking-widest ${channel.color.split(' ')[1]}`}>{channel.status}</span>
                         </div>
                     </div>
@@ -53,14 +53,14 @@ export default function AdminCommunicationPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-2">
-                    <div className="bg-[#151B2C] rounded-[2rem] border border-[#1E293B] overflow-hidden shadow-2xl">
-                        <div className="p-8 border-b border-[#1E293B] flex items-center justify-between bg-[#151B2C]">
-                            <h4 className="text-lg font-bold text-white tracking-tight">Recent Broadcast Logs</h4>
-                            <button className="text-[10px] font-bold text-[#4f46e5] uppercase tracking-widest hover:underline">Download Transit Report</button>
+                    <div className="bg-surface-card rounded-[2rem] border border-surface-card overflow-hidden shadow-2xl">
+                        <div className="p-8 border-b border-surface-card flex items-center justify-between bg-surface-card">
+                            <h4 className="text-lg font-bold text-text-heading tracking-tight">Recent Broadcast Logs</h4>
+                            <button className="text-[10px] font-bold text-primary uppercase tracking-widest hover:underline">Download Transit Report</button>
                         </div>
                         <div className="overflow-x-auto">
                             <table className="w-full text-left">
-                                <thead className="bg-[#0B1120]/50 text-slate-500 text-[10px] uppercase tracking-[0.2em] font-bold">
+                                <thead className="bg-background-main/50 text-text-placeholder text-[10px] uppercase tracking-[0.2em] font-bold">
                                     <tr>
                                         <th className="px-8 py-5">Campaign Title</th>
                                         <th className="px-8 py-5">Channel</th>
@@ -71,22 +71,22 @@ export default function AdminCommunicationPage() {
                                 </thead>
                                 <tbody className="divide-y divide-[#1E293B]">
                                     {recentCampaigns.map((camp, i) => (
-                                        <tr key={i} className="hover:bg-[#0B1120]/30 transition-all group">
+                                        <tr key={i} className="hover:bg-background-main/30 transition-all group">
                                             <td className="px-8 py-6">
-                                                <span className="text-sm font-bold text-slate-200 group-hover:text-indigo-400 transition-colors cursor-pointer">{camp.title}</span>
+                                                <span className="text-sm font-bold text-text-heading group-hover:text-primary transition-colors cursor-pointer">{camp.title}</span>
                                             </td>
-                                            <td className="px-8 py-6 text-[10px] font-bold text-slate-400 uppercase tracking-widest">{camp.channel}</td>
+                                            <td className="px-8 py-6 text-[10px] font-bold text-text-muted uppercase tracking-widest">{camp.channel}</td>
                                             <td className="px-8 py-6">
                                                 <div className="flex items-center gap-2">
-                                                    <div className="flex-1 h-1.5 w-12 bg-[#0B1120] rounded-full overflow-hidden">
+                                                    <div className="flex-1 h-1.5 w-12 bg-background-main rounded-full overflow-hidden">
                                                         <div className="bg-emerald-400 h-full rounded-full" style={{ width: camp.delivery }}></div>
                                                     </div>
                                                     <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest">{camp.delivery}</span>
                                                 </div>
                                             </td>
-                                            <td className="px-8 py-6 text-[10px] font-bold text-slate-500 uppercase tracking-widest">{camp.date}</td>
+                                            <td className="px-8 py-6 text-[10px] font-bold text-text-placeholder uppercase tracking-widest">{camp.date}</td>
                                             <td className="px-8 py-6 text-right">
-                                                <button className="p-2.5 bg-[#0B1120] border border-[#1E293B] rounded-xl text-slate-500 hover:text-white transition-all">
+                                                <button className="p-2.5 bg-background-main border border-surface-card rounded-xl text-text-placeholder hover:text-text-heading transition-all">
                                                     <span className="material-symbols-outlined text-sm">visibility</span>
                                                 </button>
                                             </td>
@@ -97,16 +97,16 @@ export default function AdminCommunicationPage() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#151B2C] p-8 rounded-3xl border border-[#1E293B] flex flex-col items-center text-center justify-center">
-                    <div className="w-16 h-16 rounded-full bg-indigo-500/10 flex items-center justify-center text-[#4f46e5] mb-6 border border-white/5">
+                <div className="bg-surface-card p-8 rounded-3xl border border-surface-card flex flex-col items-center text-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-6 border border-white/5">
                         <span className="material-symbols-outlined text-3xl">insights</span>
                     </div>
-                    <h5 className="text-white font-bold mb-2 uppercase tracking-tight">Parental Engagement</h5>
-                    <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest leading-relaxed mb-6">Average response rate increased by 15% this academic quarter through WhatsApp automation.</p>
-                    <div className="w-full h-2 bg-[#0B1120] rounded-full overflow-hidden mb-2">
-                        <div className="bg-[#4f46e5] h-full w-[85%] rounded-full shadow-[0_0_10px_rgba(79,70,229,0.5)]"></div>
+                    <h5 className="text-text-heading font-bold mb-2 uppercase tracking-tight">Parental Engagement</h5>
+                    <p className="text-text-placeholder text-[10px] font-bold uppercase tracking-widest leading-relaxed mb-6">Average response rate increased by 15% this academic quarter through WhatsApp automation.</p>
+                    <div className="w-full h-2 bg-background-main rounded-full overflow-hidden mb-2">
+                        <div className="bg-primary h-full w-[85%] rounded-full shadow-[0_0_10px_rgba(0,174,239,0.5)]"></div>
                     </div>
-                    <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Target: 95% Reach</span>
+                    <span className="text-[10px] font-bold text-text-muted uppercase tracking-widest">Target: 95% Reach</span>
                 </div>
             </div>
         </div>

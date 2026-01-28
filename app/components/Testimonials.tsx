@@ -26,16 +26,16 @@ export default function Testimonials() {
     ];
 
     return (
-        <section id="testimonials" className="px-4 md:px-20 lg:px-40 py-24 bg-[#0f1419] border-t border-gray-800">
+        <section id="testimonials" className="px-4 md:px-20 lg:px-40 py-24 bg-transparent border-t border-surface-card/20">
             <div className="max-w-[1280px] mx-auto">
                 <div className="flex flex-col gap-6 mb-16 items-center text-center">
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider w-fit">
                         Community Voice
                     </span>
-                    <h2 className="text-[#111318] dark:text-white text-3xl md:text-5xl font-black leading-tight tracking-tight max-w-[800px]">
+                    <h2 className="text-text-heading text-3xl md:text-5xl font-black leading-tight tracking-tight max-w-[800px]">
                         Trusted by Parents and Educators
                     </h2>
-                    <p className="text-[#616f89] dark:text-gray-400 text-lg font-normal leading-normal max-w-[640px]">
+                    <p className="text-text-muted text-lg font-normal leading-normal max-w-[640px]">
                         Hear from the people who use Learnexa every day to transform their learning environments.
                     </p>
                 </div>
@@ -44,7 +44,7 @@ export default function Testimonials() {
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="flex flex-col gap-6 p-8 rounded-2xl bg-gray-800/40 border border-transparent hover:border-primary/20 transition-all"
+                            className="flex flex-col gap-6 p-8 rounded-2xl bg-surface-card/40 border border-transparent hover:border-primary/20 transition-all"
                         >
                             <div className="flex text-primary">
                                 {Array.from({ length: testimonial.rating }).map((_, i) => (
@@ -63,10 +63,10 @@ export default function Testimonials() {
                                     height={48}
                                 />
                                 <div>
-                                    <h4 className="text-[#111318] dark:text-white font-bold text-sm">
+                                    <h4 className="text-text-heading font-bold text-sm">
                                         {testimonial.name}
                                     </h4>
-                                    <p className="text-[#616f89] dark:text-gray-400 text-xs">
+                                    <p className="text-text-muted text-xs">
                                         {testimonial.role}
                                     </p>
                                 </div>

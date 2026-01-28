@@ -22,20 +22,20 @@ export default function ExamCountdown() {
     }, []);
 
     return (
-        <div className="bg-gradient-to-br from-rose-500 to-orange-500 rounded-2xl p-6 text-white shadow-lg shadow-rose-500/20 relative overflow-hidden">
+        <div className="bg-gradient-to-br from-rose-500 to-orange-500 rounded-2xl p-6 text-text-heading shadow-lg shadow-rose-500/20 relative overflow-hidden">
             {/* Decorative */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/3"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-surface-card/10 rounded-full -translate-y-1/2 translate-x-1/3"></div>
 
             <div className="relative z-10">
                 <div className="flex items-center justify-between mb-4">
-                    <span className="text-[10px] font-black uppercase tracking-widest bg-white/20 px-2 py-1 rounded-md backdrop-blur-sm">
+                    <span className="text-[10px] font-black uppercase tracking-widest bg-surface-card/20 px-2 py-1 rounded-md backdrop-blur-sm">
                         ⚠️ Upcoming Exam
                     </span>
-                    <span className="w-2 h-2 bg-white rounded-full animate-ping"></span>
+                    <span className="w-2 h-2 bg-surface-card rounded-full animate-ping"></span>
                 </div>
 
                 <h3 className="text-lg font-black mb-1">Mathematics Mid-Term</h3>
-                <p className="text-white/70 text-xs mb-6">Room 301 • Dr. Alan Turing</p>
+                <p className="text-text-heading/70 text-xs mb-6">Room 301 • Dr. Alan Turing</p>
 
                 <div className="grid grid-cols-4 gap-2 mb-6">
                     {[
@@ -44,16 +44,16 @@ export default function ExamCountdown() {
                         { value: timeLeft.mins, label: "Mins" },
                         { value: timeLeft.secs, label: "Secs" },
                     ].map((item, i) => (
-                        <div key={i} className="text-center bg-white/10 backdrop-blur-sm rounded-xl py-3">
+                        <div key={i} className="text-center bg-surface-card/10 backdrop-blur-sm rounded-xl py-3">
                             <div className="text-2xl font-black tabular-nums">
                                 {String(item.value).padStart(2, '0')}
                             </div>
-                            <p className="text-[8px] text-white/70 uppercase font-bold tracking-wider">{item.label}</p>
+                            <p className="text-[8px] text-text-heading/70 uppercase font-bold tracking-wider">{item.label}</p>
                         </div>
                     ))}
                 </div>
 
-                <Link href="/student/exams" className="w-full py-3 bg-white text-rose-600 font-black rounded-xl hover:bg-white/90 transition-all flex items-center justify-center gap-2 shadow-lg">
+                <Link href="/student/exams" className="w-full py-3 bg-surface-card text-error font-black rounded-xl hover:bg-surface-card/90 transition-all flex items-center justify-center gap-2 shadow-lg">
                     <span className="material-symbols-outlined text-sm">menu_book</span>
                     View All Exams
                 </Link>

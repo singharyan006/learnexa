@@ -13,10 +13,10 @@ export default function TeacherStatsCards() {
             title: "Pending Grades",
             value: "12",
             subtitle: "4 due by EOD",
-            subtitleColor: "text-amber-600",
+            subtitleColor: "text-warning",
             icon: "assignment_late",
-            iconBg: "bg-amber-50 dark:bg-amber-900/20",
-            iconColor: "text-amber-600",
+            iconBg: "bg-warning/10 dark:bg-warning/10",
+            iconColor: "text-warning",
         },
     ];
 
@@ -25,10 +25,10 @@ export default function TeacherStatsCards() {
             {stats.map((stat, index) => (
                 <div
                     key={index}
-                    className="bg-[#151B2C] p-6 rounded-2xl shadow-sm border border-[#1E293B] flex items-center justify-between"
+                    className="bg-surface-card p-6 rounded-2xl shadow-sm border border-surface-card flex items-center justify-between"
                 >
                     <div>
-                        <p className="text-sm font-medium text-slate-500 dark:text-slate-400">
+                        <p className="text-sm font-medium text-text-placeholder dark:text-text-muted">
                             {stat.title}
                         </p>
                         <h3 className="text-3xl font-bold mt-1">{stat.value}</h3>

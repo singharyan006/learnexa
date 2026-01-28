@@ -16,15 +16,15 @@ export default function ParentNavbar() {
     ];
 
     return (
-        <nav className="sticky top-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+        <nav className="sticky top-0 z-50 bg-surface-card/80 dark:bg-surface-sidebar/80 backdrop-blur-md border-b border-surface-card/30 dark:border-surface-card">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16 items-center">
                     {/* Logo */}
                     <div className="flex items-center gap-2">
-                        <div className="bg-primary-teacher p-1.5 rounded-lg">
-                            <span className="material-icons-round text-white text-2xl">school</span>
+                        <div className="bg-primary p-1.5 rounded-lg">
+                            <span className="material-icons-round text-text-heading text-2xl">school</span>
                         </div>
-                        <span className="text-xl font-bold tracking-tight text-slate-800 dark:text-white">EduConnect</span>
+                        <span className="text-xl font-bold tracking-tight text-slate-800 dark:text-text-heading">Learnexa</span>
                     </div>
 
                     <div className="flex items-center gap-4 lg:gap-8">
@@ -42,21 +42,21 @@ export default function ParentNavbar() {
                                     height={32}
                                 />
                                 <div className="hidden sm:block text-left pr-1">
-                                    <p className="text-xs font-semibold text-slate-500 dark:text-slate-400 leading-none">Viewing Data For</p>
-                                    <p className="text-sm font-bold text-slate-800 dark:text-white">{selectedChild.name}</p>
+                                    <p className="text-xs font-semibold text-text-muted dark:text-text-muted leading-none">Viewing Data For</p>
+                                    <p className="text-sm font-bold text-slate-800 dark:text-text-heading">{selectedChild.name}</p>
                                 </div>
-                                <span className="material-icons-round text-slate-400">expand_more</span>
+                                <span className="material-icons-round text-text-muted">expand_more</span>
                             </button>
 
                             {isDropdownOpen && (
-                                <div className="absolute right-0 mt-2 w-56 bg-white dark:bg-slate-800 rounded-xl shadow-xl border border-slate-200 dark:border-slate-700 z-50">
+                                <div className="absolute right-0 mt-2 w-56 bg-surface-card dark:bg-slate-800 rounded-xl shadow-xl border border-surface-card/30 dark:border-slate-700 z-50">
                                     <div className="p-2">
                                         {children.map((child, index) => (
                                             <button
                                                 key={index}
                                                 className={`w-full flex items-center gap-3 p-2 rounded-lg transition-colors ${selectedChild.name === child.name
-                                                    ? "bg-primary-teacher/10 text-primary-teacher"
-                                                    : "hover:bg-slate-100 dark:hover:bg-slate-700 text-slate-600 dark:text-slate-300"
+                                                    ? "bg-primary/10 text-primary"
+                                                    : "hover:bg-slate-100 dark:hover:bg-slate-700 text-text-placeholder dark:text-slate-300"
                                                     } ${index > 0 ? 'mt-1' : ''}`}
                                                 onClick={() => {
                                                     setSelectedChild(child);
@@ -82,8 +82,8 @@ export default function ParentNavbar() {
                         </div>
 
                         {/* Actions */}
-                        <div className="flex items-center gap-3 border-l border-slate-200 dark:border-slate-700 pl-4 lg:pl-8">
-                            <button className="text-slate-500 hover:text-primary-teacher dark:text-slate-400 transition-colors relative">
+                        <div className="flex items-center gap-3 border-l border-surface-card/30 dark:border-slate-700 pl-4 lg:pl-8">
+                            <button className="text-text-muted hover:text-primary dark:text-text-muted transition-colors relative">
                                 <span className="material-icons-round">notifications</span>
                                 <span className="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full border-2 border-white dark:border-slate-900"></span>
                             </button>

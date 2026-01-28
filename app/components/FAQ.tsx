@@ -27,16 +27,16 @@ export default function FAQ() {
     ];
 
     return (
-        <section id="faq" className="px-4 md:px-20 lg:px-40 py-24 bg-[#0a0e13] border-t border-gray-800">
+        <section id="faq" className="px-4 md:px-20 lg:px-40 py-24 bg-transparent border-t border-surface-card/20">
             <div className="max-w-[800px] mx-auto">
                 <div className="flex flex-col gap-6 mb-16 items-center text-center">
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider w-fit">
                         Questions?
                     </span>
-                    <h2 className="text-[#111318] dark:text-white text-3xl md:text-5xl font-black leading-tight tracking-tight">
+                    <h2 className="text-text-heading text-3xl md:text-5xl font-black leading-tight tracking-tight">
                         Frequently Asked Questions
                     </h2>
-                    <p className="text-[#616f89] dark:text-gray-400 text-lg font-normal leading-normal">
+                    <p className="text-text-muted text-lg font-normal leading-normal">
                         Find answers to common questions about our platform and how it can help your institution.
                     </p>
                 </div>
@@ -45,17 +45,17 @@ export default function FAQ() {
                     {faqs.map((faq, index) => (
                         <details
                             key={index}
-                            className="group bg-gray-800/50 rounded-2xl border border-gray-800 overflow-hidden transition-all duration-300 hover:border-primary/30"
+                            className="group bg-surface-card/50 rounded-2xl border border-surface-card overflow-hidden transition-all duration-300 hover:border-primary/30"
                         >
                             <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-                                <h3 className="text-[#111318] dark:text-white text-lg font-bold">
+                                <h3 className="text-text-heading text-lg font-bold">
                                     {faq.question}
                                 </h3>
                                 <span className="material-symbols-outlined expand-icon text-primary transition-transform duration-300">
                                     expand_more
                                 </span>
                             </summary>
-                            <div className="px-6 pb-6 text-[#616f89] dark:text-gray-400 leading-relaxed">
+                            <div className="px-6 pb-6 text-text-muted leading-relaxed">
                                 {faq.answer}
                             </div>
                         </details>

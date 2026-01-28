@@ -4,14 +4,33 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #135bec;
-  --color-primary-admin: #1e3a8a;
-  --color-primary-teacher: #4f46e5;
-  --color-background-light: #f8fafc;
-  --color-background-dark: #0b1120;
-  --color-surface-dark: #151b2c;
-  --color-border-dark: #1e293b;
-  --color-accent-gold: #d4af37;
+  /* Primary Colors */
+  --color-primary: #00AEEF;
+
+  /* Backgrounds */
+  --color-background-main: #0B1F2A;
+
+  /* Surface/Cards */
+  --color-surface-card: #132E3A;
+  --color-surface-sidebar: #1C3B4A;
+
+  /* Text Colors */
+  --color-text-heading: #E6F1F5;
+  --color-text-muted: #A9C2CC;
+  --color-text-placeholder: #6F8F9B;
+
+  /* Interactive */
+  --color-hover-glow: #3FD4FF;
+
+  /* Status Colors */
+  --color-success: #2ED573;
+  --color-warning: #F5A623;
+  --color-error: #E5533D;
+
+  /* Gradient Palette (Darkened) */
+  --color-grad-center: #163A4A;
+  --color-grad-mid: #0E2A38;
+  --color-grad-outer: #03111C;
 
   --font-display: "Outfit", "Inter", sans-serif;
   --font-sans: "Inter", sans-serif;
@@ -21,20 +40,27 @@
 }
 
 :root {
-  --background: #0f172a;
-  --foreground: #f8fafc;
+  --background: #0B1F2A;
+  --foreground: #E6F1F5;
 }
 
 .dark {
-  --background: #0f172a;
-  --foreground: #f8fafc;
+  --background: #0B1F2A;
+  --foreground: #E6F1F5;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--background);
+  background: radial-gradient(circle at center, #163A4A 0%, #0E2A38 50%, #03111C 100%);
+  background-attachment: fixed;
   color: var(--foreground);
-  transition: background-color 0.2s, color 0.2s;
+  transition: color 0.2s;
+  min-height: 100vh;
+}
+
+.landing-gradient {
+  background: radial-gradient(circle at 50% 50%, #163A4A 0%, #0E2A38 50%, #03111C 100%);
+  background-attachment: fixed;
 }
 
 .material-symbols-outlined {

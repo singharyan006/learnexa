@@ -43,7 +43,7 @@ export default function StudentExams() {
             professor: "Dr. Alan Turing",
             daysLeft: 10,
             icon: "calculate",
-            color: "from-blue-500 to-indigo-600",
+            color: "from-blue-500 to-primary",
             chapters: ["Integration", "Series", "Differential Equations"]
         }
     ];
@@ -60,25 +60,25 @@ export default function StudentExams() {
     return (
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             {/* Premium Header */}
-            <div className="relative bg-gradient-to-r from-rose-500 via-orange-500 to-amber-500 rounded-3xl p-8 text-white overflow-hidden shadow-xl shadow-orange-500/20">
-                <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/3 blur-3xl"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/4 blur-2xl"></div>
+            <div className="relative bg-gradient-to-r from-rose-500 via-orange-500 to-amber-500 rounded-3xl p-8 text-text-heading overflow-hidden shadow-xl shadow-orange-500/20">
+                <div className="absolute top-0 right-0 w-80 h-80 bg-surface-card/10 rounded-full -translate-y-1/2 translate-x-1/3 blur-3xl"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-surface-card/10 rounded-full translate-y-1/2 -translate-x-1/4 blur-2xl"></div>
 
                 <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                     <div>
-                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-white/20 rounded-full text-xs font-black mb-3 backdrop-blur-sm">
-                            <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                        <div className="inline-flex items-center gap-2 px-3 py-1 bg-surface-card/20 rounded-full text-xs font-black mb-3 backdrop-blur-sm">
+                            <span className="w-2 h-2 bg-surface-card rounded-full animate-pulse"></span>
                             {upcomingExams.length} UPCOMING
                         </div>
                         <h1 className="text-3xl font-black mb-2">Examination Portal</h1>
-                        <p className="text-white/70 text-sm max-w-md">
-                            Next exam: <span className="font-black text-white">{upcomingExams[0].subject}</span> in {upcomingExams[0].daysLeft} days
+                        <p className="text-text-heading/70 text-sm max-w-md">
+                            Next exam: <span className="font-black text-text-heading">{upcomingExams[0].subject}</span> in {upcomingExams[0].daysLeft} days
                         </p>
                     </div>
 
                     <div className="flex flex-wrap items-center gap-3">
 
-                        <button className="px-5 py-2.5 bg-white hover:bg-slate-50 text-slate-900 rounded-xl text-sm font-black flex items-center gap-2 transition-all shadow-lg hover:scale-105">
+                        <button className="px-5 py-2.5 bg-surface-card hover:bg-surface-card/20 text-text-heading rounded-xl text-sm font-black flex items-center gap-2 transition-all shadow-lg hover:scale-105">
                             <span className="material-symbols-outlined text-sm">school</span>
                             Study Resources
                         </button>
@@ -91,14 +91,14 @@ export default function StudentExams() {
                 {[
                     { label: "Upcoming", value: upcomingExams.length, icon: "event_upcoming", color: "from-rose-500 to-pink-600" },
                     { label: "Completed", value: pastResults.length, icon: "task_alt", color: "from-emerald-500 to-teal-500" },
-                    { label: "Avg Score", value: `${avgScore}%`, icon: "trending_up", color: "from-blue-500 to-indigo-600" },
+                    { label: "Avg Score", value: `${avgScore}%`, icon: "trending_up", color: "from-blue-500 to-primary" },
                     { label: "Best Grade", value: "A+", icon: "emoji_events", color: "from-amber-500 to-orange-500" },
                 ].map((stat, idx) => (
-                    <div key={idx} className={`bg-gradient-to-br ${stat.color} rounded-2xl p-5 text-white shadow-lg relative overflow-hidden group hover:scale-105 transition-transform cursor-pointer`}>
-                        <div className="absolute top-0 right-0 w-16 h-16 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/3"></div>
+                    <div key={idx} className={`bg-gradient-to-br ${stat.color} rounded-2xl p-5 text-text-heading shadow-lg relative overflow-hidden group hover:scale-105 transition-transform cursor-pointer`}>
+                        <div className="absolute top-0 right-0 w-16 h-16 bg-surface-card/10 rounded-full -translate-y-1/2 translate-x-1/3"></div>
                         <span className="material-symbols-outlined text-2xl mb-2 group-hover:scale-110 transition-transform">{stat.icon}</span>
                         <p className="text-2xl font-black">{stat.value}</p>
-                        <p className="text-[10px] font-bold uppercase tracking-wider text-white/70">{stat.label}</p>
+                        <p className="text-[10px] font-bold uppercase tracking-wider text-text-heading/70">{stat.label}</p>
                     </div>
                 ))}
             </div>
@@ -106,26 +106,26 @@ export default function StudentExams() {
             {/* Upcoming Exams */}
             <div>
                 <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-xl font-black text-slate-900 dark:text-white flex items-center gap-2">
-                        <span className="material-symbols-outlined text-rose-500">schedule</span>
+                    <h2 className="text-xl font-black text-text-heading text-text-heading flex items-center gap-2">
+                        <span className="material-symbols-outlined text-error">schedule</span>
                         Upcoming Exams
                     </h2>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                     {upcomingExams.map((exam) => (
-                        <div key={exam.id} className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700/50 overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all group">
+                        <div key={exam.id} className="bg-surface-card dark:bg-surface-card rounded-2xl border border-surface-card dark:border-surface-card/50 overflow-hidden shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all group">
                             {/* Gradient Header */}
-                            <div className={`bg-gradient-to-r ${exam.color} p-5 text-white relative overflow-hidden`}>
-                                <div className="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/3"></div>
+                            <div className={`bg-gradient-to-r ${exam.color} p-5 text-text-heading relative overflow-hidden`}>
+                                <div className="absolute top-0 right-0 w-20 h-20 bg-surface-card/10 rounded-full -translate-y-1/2 translate-x-1/3"></div>
                                 <div className="flex items-center justify-between relative z-10">
                                     <div className="flex items-center gap-3">
-                                        <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform">
+                                        <div className="w-12 h-12 bg-surface-card/20 rounded-xl flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform">
                                             <span className="material-symbols-outlined text-2xl">{exam.icon}</span>
                                         </div>
                                         <div>
                                             <h3 className="font-black">{exam.subject}</h3>
-                                            <span className="text-xs font-bold bg-white/20 px-2 py-0.5 rounded-full">{exam.type}</span>
+                                            <span className="text-xs font-bold bg-surface-card/20 px-2 py-0.5 rounded-full">{exam.type}</span>
                                         </div>
                                     </div>
                                     <div className="text-right">
@@ -138,36 +138,36 @@ export default function StudentExams() {
                             {/* Content */}
                             <div className="p-5 space-y-4">
                                 <div className="grid grid-cols-2 gap-4">
-                                    <div className="flex items-center gap-2 text-sm text-slate-500">
-                                        <span className="material-symbols-outlined text-sm text-primary-teacher">calendar_month</span>
+                                    <div className="flex items-center gap-2 text-sm text-text-placeholder">
+                                        <span className="material-symbols-outlined text-sm text-primary">calendar_month</span>
                                         {exam.date}
                                     </div>
-                                    <div className="flex items-center gap-2 text-sm text-slate-500">
-                                        <span className="material-symbols-outlined text-sm text-primary-teacher">schedule</span>
+                                    <div className="flex items-center gap-2 text-sm text-text-placeholder">
+                                        <span className="material-symbols-outlined text-sm text-primary">schedule</span>
                                         {exam.time}
                                     </div>
-                                    <div className="flex items-center gap-2 text-sm text-slate-500">
-                                        <span className="material-symbols-outlined text-sm text-primary-teacher">timer</span>
+                                    <div className="flex items-center gap-2 text-sm text-text-placeholder">
+                                        <span className="material-symbols-outlined text-sm text-primary">timer</span>
                                         {exam.duration}
                                     </div>
-                                    <div className="flex items-center gap-2 text-sm text-slate-500">
-                                        <span className="material-symbols-outlined text-sm text-primary-teacher">location_on</span>
+                                    <div className="flex items-center gap-2 text-sm text-text-placeholder">
+                                        <span className="material-symbols-outlined text-sm text-primary">location_on</span>
                                         {exam.location}
                                     </div>
                                 </div>
 
-                                <div className="pt-4 border-t border-slate-100 dark:border-slate-700">
-                                    <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-2">Topics to Cover</p>
+                                <div className="pt-4 border-t border-surface-card dark:border-surface-card">
+                                    <p className="text-[10px] font-bold text-text-muted uppercase tracking-wider mb-2">Topics to Cover</p>
                                     <div className="flex flex-wrap gap-2">
                                         {exam.chapters.map((chapter, i) => (
-                                            <span key={i} className="px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded-lg text-[10px] font-bold text-slate-600 dark:text-slate-300">
+                                            <span key={i} className="px-2 py-1 bg-slate-100 dark:bg-surface-sidebar rounded-lg text-[10px] font-bold text-text-placeholder dark:text-text-muted">
                                                 {chapter}
                                             </span>
                                         ))}
                                     </div>
                                 </div>
 
-                                <button className="w-full py-3 bg-slate-900 dark:bg-slate-700 text-white font-black rounded-xl hover:bg-slate-800 transition-all flex items-center justify-center gap-2">
+                                <button className="w-full py-3 bg-background-main dark:bg-surface-sidebar text-text-heading font-black rounded-xl hover:bg-surface-card transition-all flex items-center justify-center gap-2">
                                     <span className="material-symbols-outlined text-sm">menu_book</span>
                                     Start Preparing
                                 </button>
@@ -180,18 +180,18 @@ export default function StudentExams() {
             {/* Past Results */}
             <div>
                 <div className="flex items-center justify-between mb-6">
-                    <h2 className="text-xl font-black text-slate-900 dark:text-white flex items-center gap-2">
-                        <span className="material-symbols-outlined text-emerald-500">fact_check</span>
+                    <h2 className="text-xl font-black text-text-heading text-text-heading flex items-center gap-2">
+                        <span className="material-symbols-outlined text-success">fact_check</span>
                         Recent Results
                     </h2>
-                    <button className="text-sm font-bold text-primary-teacher hover:underline">View All Results</button>
+                    <button className="text-sm font-bold text-primary hover:underline">View All Results</button>
                 </div>
 
-                <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-100 dark:border-slate-700/50 overflow-hidden shadow-lg">
+                <div className="bg-surface-card dark:bg-surface-card rounded-2xl border border-surface-card dark:border-surface-card/50 overflow-hidden shadow-lg">
                     <div className="overflow-x-auto">
                         <table className="w-full">
                             <thead>
-                                <tr className="bg-slate-50 dark:bg-slate-900/50 text-slate-500 uppercase text-[10px] font-black tracking-widest border-b border-slate-100 dark:border-slate-700">
+                                <tr className="bg-slate-50 dark:bg-background-main/50 text-text-placeholder uppercase text-[10px] font-black tracking-widest border-b border-surface-card dark:border-surface-card">
                                     <th className="px-6 py-4 text-left">Subject</th>
                                     <th className="px-6 py-4 text-left">Date</th>
                                     <th className="px-6 py-4 text-center">Score</th>
@@ -201,31 +201,31 @@ export default function StudentExams() {
                             </thead>
                             <tbody className="divide-y divide-slate-100 dark:divide-slate-700">
                                 {pastResults.map((result) => (
-                                    <tr key={result.id} className="hover:bg-slate-50/50 dark:hover:bg-slate-700/30 transition-colors group">
+                                    <tr key={result.id} className="hover:bg-surface-card/50 dark:hover:bg-surface-sidebar/30 transition-colors group">
                                         <td className="px-6 py-4">
                                             <div className="flex items-center gap-3">
-                                                <div className="w-10 h-10 bg-primary-teacher/10 rounded-xl flex items-center justify-center">
-                                                    <span className="material-symbols-outlined text-primary-teacher">{result.icon}</span>
+                                                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
+                                                    <span className="material-symbols-outlined text-primary">{result.icon}</span>
                                                 </div>
-                                                <span className="font-black text-slate-900 dark:text-white">{result.subject}</span>
+                                                <span className="font-black text-text-heading text-text-heading">{result.subject}</span>
                                             </div>
                                         </td>
-                                        <td className="px-6 py-4 text-sm text-slate-500">{result.date}</td>
+                                        <td className="px-6 py-4 text-sm text-text-placeholder">{result.date}</td>
                                         <td className="px-6 py-4">
                                             <div className="flex items-center justify-center gap-3">
-                                                <div className="w-20 h-2 bg-slate-100 dark:bg-slate-700 rounded-full overflow-hidden">
-                                                    <div className={`h-full rounded-full ${result.score >= 90 ? 'bg-emerald-500' : result.score >= 75 ? 'bg-primary-teacher' : 'bg-amber-500'}`} style={{ width: `${result.score}%` }}></div>
+                                                <div className="w-20 h-2 bg-slate-100 dark:bg-surface-sidebar rounded-full overflow-hidden">
+                                                    <div className={`h-full rounded-full ${result.score >= 90 ? 'bg-success' : result.score >= 75 ? 'bg-primary' : 'bg-warning'}`} style={{ width: `${result.score}%` }}></div>
                                                 </div>
                                                 <span className="font-black text-sm">{result.score}/{result.maxScore}</span>
                                             </div>
                                         </td>
                                         <td className="px-6 py-4 text-center">
-                                            <span className={`inline-flex items-center justify-center w-10 h-10 rounded-xl font-black text-sm ${result.grade.includes('A') ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600' : 'bg-amber-100 dark:bg-amber-900/30 text-amber-600'}`}>
+                                            <span className={`inline-flex items-center justify-center w-10 h-10 rounded-xl font-black text-sm ${result.grade.includes('A') ? 'bg-emerald-100 dark:bg-emerald-900/30 text-success' : 'bg-amber-100 dark:bg-amber-900/30 text-warning'}`}>
                                                 {result.grade}
                                             </span>
                                         </td>
                                         <td className="px-6 py-4 text-right">
-                                            <button className="opacity-0 group-hover:opacity-100 transition-opacity px-3 py-1.5 bg-primary-teacher/10 text-primary-teacher rounded-lg text-xs font-bold hover:bg-primary-teacher hover:text-white">
+                                            <button className="opacity-0 group-hover:opacity-100 transition-opacity px-3 py-1.5 bg-primary/10 text-primary rounded-lg text-xs font-bold hover:bg-primary hover:text-text-heading">
                                                 View Report
                                             </button>
                                         </td>

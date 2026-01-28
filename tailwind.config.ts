@@ -10,12 +10,33 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#135bec",
-        "primary-admin": "#1e3a8a", // Navy Blue for Admin
-        "primary-teacher": "#4F46E5", // Indigo for Teacher
-        "background-light": "#f8fafc",
-        "background-dark": "#0f172a",
-        "accent-gold": "#d4af37",
+        // Primary Colors (Cyan CTA)
+        primary: "#00AEEF",
+        
+        // Backgrounds
+        "background-main": "#0B1F2A",
+        
+        // Surface/Cards
+        "surface-card": "#132E3A",
+        "surface-sidebar": "#1C3B4A",
+        
+        // Text Colors
+        "text-heading": "#E6F1F5",
+        "text-muted": "#A9C2CC",
+        "text-placeholder": "#6F8F9B",
+        
+        // Interactive
+        "hover-glow": "#3FD4FF",
+        
+        // Status Colors
+        "success": "#2ED573", // Green
+        "warning": "#F5A623", // Muted amber
+        "error": "#E5533D", // Soft red
+        
+        // Background Gradient Colors
+        "grad-center": "#23617C",
+        "grad-mid": "#17435A",
+        "grad-outer": "#071D31",
       },
       fontFamily: {
         display: ["Outfit", "Inter", "sans-serif"],

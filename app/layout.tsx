@@ -27,7 +27,7 @@ export default function RootLayout({
             rel="stylesheet"
           />
         </head>
-        <body className="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white transition-colors duration-200 antialiased">
+        <body className="bg-background-main text-text-heading transition-colors duration-200 antialiased">
           {children}
         </body>
       </html>

@@ -7,10 +7,10 @@ export default function AdminDashboard() {
     return (
         <div className="space-y-8">
             <div className="mb-8">
-                <h1 className="text-3xl font-display font-bold text-white uppercase tracking-tight">
+                <h1 className="text-3xl font-display font-bold text-text-heading uppercase tracking-tight">
                     Central Command
                 </h1>
-                <p className="text-slate-400 mt-1 font-medium">
+                <p className="text-text-muted mt-1 font-medium">
                     Real-time overview of your school&apos;s performance and operations.
                 </p>
             </div>
@@ -29,7 +29,7 @@ export default function AdminDashboard() {
             <ExaminationsTable />
 
             <footer className="mt-12 mb-8 text-center">
-                <div className="inline-flex items-center space-x-2 text-slate-500 text-xs font-bold uppercase tracking-widest">
+                <div className="inline-flex items-center space-x-2 text-text-placeholder text-xs font-bold uppercase tracking-widest">
                     <span className="material-symbols-outlined text-sm">cloud_done</span>
                     <span>Cloud-based Centralized ERP Platform • Professional Grade School Management</span>
                 </div>
