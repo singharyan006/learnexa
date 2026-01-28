@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LearnExa - Modern School ERP System
 
-## Getting Started
+LearnExa is a comprehensive, modern School Enterprise Resource Planning (ERP) system designed to streamline educational management. Built with a focus on user experience and efficiency, it provides dedicated dashboards for all stakeholders: Admins, Teachers, Students, and Parents.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### 🏢 Admin Dashboard
+- **Financial Management**: Track fee collection with interactive charts.
+- **Activity Monitoring**: Keep tabs on recent school-wide activities.
+- **Examination Control**: Manage and monitor exam schedules and status.
+- **Resource Stats**: Overview of total students, classes, and revenue.
+
+### 👨‍🏫 Teacher Dashboard
+- **Class Management**: Real-time attendance tracking and schedule overview.
+- **Academic Tracking**: Monitor recent assignment submissions and student progress.
+- **Communication Hub**: Quick access for parent-teacher interactions.
+- **Notice Board**: Post and manage important class-specific notices.
+
+### 🎓 Student Dashboard
+- **Academic Progress**: Visual summary of grades and ongoing courses.
+- **Schedule Management**: Personal timetable and exam countdowns.
+- **Assignment Tracker**: Stay updated with active assignments and due dates.
+- **Quick Links**: Direct links to library, results, and support.
+
+### 👪 Parent Dashboard
+- **Student Monitoring**: Keep track of child's attendance and performance.
+- **School Feed**: Stay updated with school events and announcements.
+- **Secure Communication**: Direct channel to communicate with school staff.
+- **Financial Status**: Easy access to fee status and payment history.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Next.js 14+ (App Router)](https://nextjs.org)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Icons**: [Lucide React](https://lucide.dev)
+- **Language**: [TypeScript](https://www.typescriptlang.org)
+
+## 📁 Project Structure
+
+```text
+app/
+├── admin/          # Admin Dashboard & Components
+├── teacher/        # Teacher Dashboard & Components
+├── student/        # Student Dashboard & Components
+├── parent/         # Parent Dashboard & Components
+├── components/     # Common Landing Page Components
+├── globals.css     # Global styles
+└── layout.tsx      # Root layout
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚦 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js 18+ 
+- npm / yarn / pnpm
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. Clone the repository:
+   ```bash
+   git clone [repository-url]
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Built with ❤️ for better education.
