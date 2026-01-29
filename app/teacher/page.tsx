@@ -3,6 +3,7 @@ import CurrentClassAttendance from "./components/CurrentClassAttendance";
 import RecentSubmissions from "./components/RecentSubmissions";
 import TodaySchedule from "./components/TodaySchedule";
 import Notices from "./components/Notices";
+import Communication from "./components/Communication";
 
 export default function TeacherDashboard() {
     return (
@@ -13,6 +14,7 @@ export default function TeacherDashboard() {
                 <div className="lg:col-span-2 space-y-8">
                     <CurrentClassAttendance />
                     <RecentSubmissions />
+                    <Communication />
                 </div>
 
                 <div className="space-y-8">
