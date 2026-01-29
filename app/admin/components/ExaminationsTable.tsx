@@ -21,7 +21,7 @@ export default function ExaminationsTable() {
             grade: "Grade 9",
             datetime: "Oct 26, 08:00 AM",
             coordinator: "Emma Watson",
-            status: "PENDING APPROVAL",
+            status: "PENDING",
             statusColor: "bg-warning/10 text-amber-400 border-amber-500/20",
         },
     ];
@@ -69,7 +69,7 @@ export default function ExaminationsTable() {
                                     </div>
                                 </td>
                                 <td className="px-8 py-6">
-                                    <span className={`px-3 py-1.5 rounded-lg text-[10px] font-bold border ${exam.statusColor}`}>
+                                    <span className={`inline-flex items-center justify-center w-28 px-3 py-1.5 rounded-lg text-[10px] font-bold border whitespace-nowrap ${exam.statusColor}`}>
                                         {exam.status}
                                     </span>
                                 </td>
