@@ -6,6 +6,7 @@ import ExamCountdown from "./components/ExamCountdown";
 import ActiveAssignments from "./components/ActiveAssignments";
 import StudentSchedule from "./components/StudentSchedule";
 import QuickLinks from "./components/QuickLinks";
+import Communication from "./components/Communication";
 
 export default function StudentDashboard() {
     return (
@@ -21,6 +22,8 @@ export default function StudentDashboard() {
                         <OngoingCourses />
                         <GradesSummary />
                     </div>
+
+                    <Communication />
 
                     <ActiveAssignments />
                 </div>
